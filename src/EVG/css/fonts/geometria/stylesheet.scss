@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Geometria';
+    src: url('./fonts/geometria/Geometria.woff2') format('woff2'),
+        url('./fonts/geometria/Geometria.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geometria';
+    src: url('./fonts/geometria/Geometria-Light.woff2') format('woff2'),
+        url('./fonts/geometria/Geometria-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
