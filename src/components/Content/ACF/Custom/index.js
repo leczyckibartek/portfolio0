@@ -4,6 +4,7 @@ import './style.scss'
 import HeroDetail from './HeroDetail'
 import Map from './Map'
 import Links from './Links'
+import ImageSection from './ImageSection'
 
 function ACFCustom(props) {
 	// Chain Animation
@@ -55,6 +56,12 @@ function ACFCustom(props) {
   if (props.fieldGroupName === 'page_Pagebuilder_Sections_Content_Block_Custom' && props.anchor === 'custom-links') {
 		return (
 			<Links delay={delay} images={images} files={files} fields={fields} wysiwygs={wysiwygs} maps={maps} delay={delay} />
+		)
+	}
+
+  if (props.fieldGroupName === 'page_Pagebuilder_Sections_Content_Block_Custom' && props.anchor === 'custom-image') {
+		return (
+			<ImageSection delay={delay} images={images} files={files} fields={fields} wysiwygs={wysiwygs} maps={maps} delay={delay} />
 		)
 	}
 
