@@ -2,9 +2,8 @@ import { graphql } from 'gatsby'
 
 export const imgFull = graphql`
 	fragment imgFull on File {
-		extension
 		childImageSharp {
-			gatsbyImageData(webpOptions: {quality: 90}, layout: FULL_WIDTH, formats: WEBP, placeholder: NONE)
+			gatsbyImageData(webpOptions: {quality: 90}, layout: FULL_WIDTH, formats: WEBP)
 		}
 	}
 `
@@ -16,28 +15,6 @@ export const wpGeneralSettings = graphql`
 				title
 				description
 				language
-			}
-		}
-	}
-`
-
-export const acfOptions = graphql`
-	fragment acfOptions on Query {
-		wp {
-			options {
-				acfOptions {
-					footerImage {
-						localFile {
-							...imgFull
-						}
-					}
-					socialIcons {
-						link
-						icon
-						hint
-					}
-					copy
-				}
 			}
 		}
 	}

@@ -28,16 +28,6 @@ const sliderSettings = {
 	variableWidth: false
 }
 
-function safelyParseJSON (json) {
-  var parsed
-
-  try {
-    parsed = JSON.parse(json)
-  } catch (e) {}
-
-  return parsed // Could be undefined!
-}
-
 // Main
 function ACFBlocks(props) {
 
@@ -48,11 +38,10 @@ function ACFBlocks(props) {
 		const anchor = node.anchor
 		const classes = node.classes
 		const layout = node.fieldGroupName
-		const style = safelyParseJSON(node.style)
 
 		// Returning Block
 		return (
-			<div key={i} id={anchor ? 'block-' + anchor : null}  className={`block block-${layout} area-${i} ${classes ? classes : ''}`} style={style}>
+			<div key={i} id={anchor ? 'block-' + anchor : null}  className={`block block-${layout} area-${i} ${classes ? classes : ''}`}>
 
 				<ACFImage {...node} inheritedDelay={i * 125} />
 

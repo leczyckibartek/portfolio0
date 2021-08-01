@@ -9,19 +9,16 @@ export const acfContent = graphql`
 				fieldGroupName
 				anchor
 				classes
-				style
 				wysiwyg
 			}
 			... on WpPage_Pagebuilder_Sections_Content_Block_Image {
 				fieldGroupName
 				anchor
 				classes
-				style
 				bgOverlay
 				parallaxFrom
 				parallaxTo
 				wysiwyg
-				lightbox
 				img {
 					localFile {
 						...imgFull
@@ -38,7 +35,6 @@ export const acfContent = graphql`
 				fieldGroupName
 				anchor
 				classes
-				style
 				bgOverlay
 				videoIframe
 				videoSource
@@ -63,7 +59,6 @@ export const acfContent = graphql`
 				fieldGroupName
 				anchor
 				classes
-				style
 				bgOverlay
 				videoIframe
 				videoSource
@@ -88,7 +83,6 @@ export const acfContent = graphql`
 				fieldGroupName
 				anchor
 				classes
-				style
 				asset {
 					... on WpPage_Pagebuilder_Sections_Content_Block_Custom_Asset_Field {
 						fieldGroupName
