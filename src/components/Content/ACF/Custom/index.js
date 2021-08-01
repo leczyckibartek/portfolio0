@@ -39,9 +39,9 @@ function ACFCustom(props) {
 		})
 
 
-	if (props.fieldGroupName === 'page_Pagebuilder_Sections_Content_Block_Custom' && props.anchor === 'custom-home-detail') {
+	if (props.fieldGroupName === 'page_Pagebuilder_Sections_Content_Block_Custom' && props.anchor === 'custom-hero-detail') {
 		return (
-			<HeroDetail delay={delay} images={images} files={files} fields={fields} wysiwygs={wysiwygs} maps={maps} />
+			<HeroDetail delay={delay} images={images} files={files} fields={fields} wysiwygs={wysiwygs} maps={maps} delay={delay} />
 		)
 	}
 

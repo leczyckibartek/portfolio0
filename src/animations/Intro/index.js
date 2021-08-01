@@ -16,6 +16,20 @@ function sumValues(obj) {
 	return Object.values(obj).reduce((a, b) => a + b)
 }
 
+//Slide Bottom IN 
+
+function slideBottomIn(timeline, duration) {
+
+	timeline
+		.add({
+			opacity: [1, 1],
+			translateY: ['100%', 0],
+			delay: 0,
+			duration: duration,
+			easing: 'easeOutSine',
+		})
+}
+
 // Blink IN
 function blinkIn(timeline) {
 
@@ -482,6 +496,10 @@ function Intro(props) {
 					diagonalBottomRightIn(timeline, in_[animation])
 				}
 
+        if (animation === 'slideBottom') {
+					slideBottomIn(timeline, in_[animation])
+				}
+
 				if (animation === 'done') {
 					timeline.finished.then(function() {
 						element.classList.add('done')
@@ -551,6 +569,7 @@ function Intro(props) {
 			if (animation === 'draw') {
 				drawOut(timeline, path, in_[animation])
 			}
+      
 		}
 	}
 
