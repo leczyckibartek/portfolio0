@@ -1,0 +1,14 @@
+.social-icon {
+	&.hint--bottom::before {
+		margin-top: calc(-1.5em - 9px);
+	}
+	&.hint--bottom::after {
+		margin-top: calc(-1.5em - 6px);
+	}
+	&.hint--left::before {
+		margin-bottom: -8px;
+	}
+	&:before {
+		//background-color: transparent !important;
+	}
+}

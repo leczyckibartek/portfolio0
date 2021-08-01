@@ -1,0 +1,29 @@
+[Settings]
+  ID = "98cc2068-c352-4739-98e4-af78eba1eb00"
+
+# A redirect rule which routes Wordpress admin attempts to an offensive external URL.
+[[redirects]]
+    from = "/wp-login.php"
+    to = "https://www.youtube.com/watch?v=KGAAhzreGWw"
+    status = 301
+
+[[redirects]]
+    from = "/wp-admin/"
+    to = "https://www.youtube.com/watch?v=KGAAhzreGWw"
+    status = 301
+
+# Headers to return with requests for the specified paths
+[[headers]]
+  # Define which paths this specific [[headers]] block will cover.
+  for = "/*"
+
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+
+    # Multi-key header rules are expressed with multi-line strings.
+    cache-control = '''
+      max-age=31557600,
+      no-cache,
+      no-store,
+      must-revalidate'''

@@ -1,0 +1,688 @@
+/* ==========================================================================
+  Color Themes
+========================================================================== */
+
+.c0 {
+	background-color: $c0;
+	color: $c0p;
+
+	&.t {
+		background-color: transparent;
+	}
+
+	input,
+	textarea {
+		background-color: lighten($c0,3%);
+		border-color: $c0;
+
+		&[type="submit"] {
+			background-color: $clead;
+		}
+	}
+
+	button[type="submit"] {
+		background-color: $clead;
+		border-color: $c0;
+	}
+
+	.border {
+		border-color: darken($c0, 4%);
+	}
+
+	.bg {
+		background-color: $c0;
+	}
+
+	.btn {
+		span {
+			background: $c0p;
+			color: $c0;
+		}
+		&:before {
+			background: $c0;
+		}
+	}
+
+	.contrast {
+		background-color: $c0p;
+	}
+
+	a {
+		color: $c0a;
+		
+		&:hover {
+			color: $c0ah;
+		}
+
+		&:before {
+			background-color: $c0ah;
+		}
+	}
+
+	h1,h2,h3,h4,h5,h6,
+	.h1,.h2,.h3,.h4,.h5,.h6 {
+		color: $c0h;
+	}
+
+	.content-box {
+		a,
+		.underline {
+			text-shadow: .03em 0 $c0,-.03em 0 $c0,0 .03em $c0,0 -.03em $c0,.06em 0 $c0,-.06em 0 $c0,.09em 0 $c0,-.09em 0 $c0,.12em 0 $c0,-.12em 0 $c0,.15em 0 $c0,-.15em 0 $c0;
+			background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, $c0a 1px, $c0a 2px, rgba(0, 0, 0, 0) 2px);
+
+			&:hover {
+				background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, $c0h 1px, $c0h 2px, rgba(0, 0, 0, 0) 2px);
+			}
+		}
+	}
+
+	&.x0 {
+		background-color: $c0;
+	}
+}
+
+.c1 {
+	background-color: $c1;
+	color: $c1p;
+
+	&.darker {
+		background-color: #dedede;
+	}
+
+	&.t {
+		background-color: transparent;
+	}
+
+	input,
+	textarea {
+		background-color: lighten($c1,3%);
+		border-color: $c1;
+
+		&[type="submit"] {
+			background-color: $clead;
+		}
+	}
+
+	button[type="submit"] {
+		background-color: $clead;
+		border-color: $c1;
+	}
+
+	.border {
+		border-color: darken($c1, 4%);
+	}
+
+	.bg {
+		background-color: $c1;
+	}
+
+	.btn {
+		span {
+			background: $c1p;
+			color: $x0;
+		}
+	}
+
+	.contrast {
+		background-color: $c1p;
+	}
+
+	a {
+		color: $c1a;
+		
+		&:hover {
+			color: $c1ah;
+		}
+
+		&:before {
+			background-color: $c1ah;
+		}
+	}
+
+	h1,h2,h3,h4,h5,h6,
+	.h1,.h2,.h3,.h4,.h5,.h6 {
+		color: $c1h;
+	}
+
+	.content-box {
+		a,
+		.underline {
+			text-shadow: .03em 0 $c1,-.03em 0 $c1,0 .03em $c1,0 -.03em $c1,.06em 0 $c1,-.06em 0 $c1,.09em 0 $c1,-.09em 0 $c1,.12em 0 $c1,-.12em 0 $c1,.15em 0 $c1,-.15em 0 $c1;
+			background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, $c1a 1px, $c1a 2px, rgba(0, 0, 0, 0) 2px);
+
+			&:hover {
+				background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, $c1h 1px, $c1h 2px, rgba(0, 0, 0, 0) 2px);
+			}
+		}
+	}
+}
+
+.c2 {
+	background-color: $c2;
+	color: $c2p;
+
+	&.t {
+		background-color: transparent;
+	}
+
+	input,
+	textarea {
+		background-color: lighten($c2,3%);
+		border-color: $c2;
+
+		&[type="submit"] {
+			background-color: $clead;
+		}
+	}
+
+	button[type="submit"] {
+		background-color: $clead;
+		border-color: $c2;
+	}
+
+	.border {
+		border-color: darken($c2, 4%);
+	}
+
+	.bg {
+		background-color: $c2;
+	}
+
+	.btn {
+		span {
+			background: $clead;
+			color: $x1;
+			border: 1px solid $x1;
+		}
+
+		&::before {
+			background: $x1;
+		}
+	}
+
+	.contrast {
+		background-color: $c2p;
+	}
+
+	a {
+		color: $c2a;
+		
+		&:hover {
+			color: $c2ah;
+		}
+
+		&:before {
+			background-color: $c2ah;
+		}
+	}
+
+	h1,h2,h3,h4,h5,h6,
+	.h1,.h2,.h3,.h4,.h5,.h6 {
+		color: $c2h;
+	}
+
+	.content-box {
+		a,
+		.underline {
+			text-shadow: .03em 0 $c2,-.03em 0 $c2,0 .03em $c2,0 -.03em $c2,.06em 0 $c2,-.06em 0 $c2,.09em 0 $c2,-.09em 0 $c2,.12em 0 $c2,-.12em 0 $c2,.15em 0 $c2,-.15em 0 $c2;
+			background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, $c2a 1px, $c2a 2px, rgba(0, 0, 0, 0) 2px);
+
+			&:hover {
+				background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, $c2h 1px, $c2h 2px, rgba(0, 0, 0, 0) 2px);
+			}
+		}
+	}
+}
+
+.c3 {
+	background-color: $c3;
+	color: $c3p;
+
+	&.t {
+		background-color: transparent;
+	}
+
+	input,
+	textarea {
+		background-color: lighten($c3,3%);
+		border-color: $c3;
+
+		&[type="submit"] {
+			background-color: $clead;
+		}
+	}
+
+	button[type="submit"] {
+		background-color: $clead;
+		border-color: $c3;
+	}
+
+	.border {
+		border-color: darken($c3, 4%);
+	}
+
+	.bg {
+		background-color: $c3;
+	}
+
+	.btn {
+		span {
+			background: $c3p;
+			color: $x0;
+		}
+	}
+
+	.contrast {
+		background-color: $c3p;
+	}
+
+	a {
+		color: $c3a;
+		
+		&:hover {
+			color: $c3ah;
+		}
+
+		&:before {
+			background-color: $c3ah;
+		}
+	}
+
+	h1,h2,h3,h4,h5,h6,
+	.h1,.h2,.h3,.h4,.h5,.h6 {
+		color: $c3h;
+	}
+
+	.content-box {
+		a,
+		.underline {
+			text-shadow: .03em 0 $c3,-.03em 0 $c3,0 .03em $c3,0 -.03em $c3,.06em 0 $c3,-.06em 0 $c3,.09em 0 $c3,-.09em 0 $c3,.12em 0 $c3,-.12em 0 $c3,.15em 0 $c3,-.15em 0 $c3;
+			background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, $c3a 1px, $c3a 2px, rgba(0, 0, 0, 0) 2px);
+
+			&:hover {
+				background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, $c3h 1px, $c3h 2px, rgba(0, 0, 0, 0) 2px);
+			}
+		}
+	}
+}
+
+.c4 {
+	background-color: $c4;
+	color: $c4p;
+
+	&.t {
+		background-color: transparent;
+	}
+
+	input,
+	textarea {
+		background-color: lighten($c4,3%);
+		border-color: $c4;
+
+		&[type="submit"] {
+			background-color: $clead;
+		}
+	}
+
+	button[type="submit"] {
+		background-color: $clead;
+		border-color: $c4;
+	}
+
+	.border {
+		border-color: darken($c4, 4%);
+	}
+
+	.bg {
+		background-color: $c4;
+	}
+
+	.btn {
+		span {
+			background: $c4p;
+			color: $x0;
+		}
+	}
+
+	.contrast {
+		background-color: $c4p;
+	}
+
+	a {
+		color: $c4a;
+		
+		&:hover {
+			color: $c4ah;
+		}
+
+		&:before {
+			background-color: $c4ah;
+		}
+	}
+
+	h1,h2,h3,h4,h5,h6,
+	.h1,.h2,.h3,.h4,.h5,.h6 {
+		color: $c4h;
+	}
+
+	.content-box {
+		a,
+		.underline {
+			text-shadow: .03em 0 $c4,-.03em 0 $c4,0 .03em $c4,0 -.03em $c4,.06em 0 $c4,-.06em 0 $c4,.09em 0 $c4,-.09em 0 $c4,.12em 0 $c4,-.12em 0 $c4,.15em 0 $c4,-.15em 0 $c4;
+			background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, $c4a 1px, $c4a 2px, rgba(0, 0, 0, 0) 2px);
+
+			&:hover {
+				background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, $c4h 1px, $c4h 2px, rgba(0, 0, 0, 0) 2px);
+			}
+		}
+	}
+}
+
+.c5 {
+	background-color: $c5;
+	color: $c5p;
+
+	&.t {
+		background-color: transparent;
+	}
+
+	input,
+	textarea {
+		background-color: lighten($c5,3%);
+		border-color: $c5;
+
+		&[type="submit"] {
+			background-color: $clead;
+		}
+	}
+
+	button[type="submit"] {
+		background-color: $clead;
+		border-color: $c5;
+	}
+
+	.border {
+		border-color: lighten($c5, 4%);
+	}
+
+	.bg {
+		background-color: $c5;
+	}
+
+	.btn {
+		span {
+			background: $c5p;
+			color: $x1;
+		}
+
+		&::before {
+			background: $x1;
+		}
+	}
+
+	.contrast {
+		background-color: $c5p;
+	}
+
+	a {
+		color: $c5a;
+		
+		&:hover {
+			color: $c5ah;
+		}
+
+		&:before {
+			background-color: $c5ah;
+		}
+	}
+
+	h1,h2,h3,h4,h5,h6,
+	.h1,.h2,.h3,.h4,.h5,.h6 {
+		color: $c5h;
+	}
+
+	.content-box {
+		a,
+		.underline {
+			text-shadow: .03em 0 $c5,-.03em 0 $c5,0 .03em $c5,0 -.03em $c5,.06em 0 $c5,-.06em 0 $c5,.09em 0 $c5,-.09em 0 $c5,.12em 0 $c5,-.12em 0 $c5,.15em 0 $c5,-.15em 0 $c5;
+			background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, $c5a 1px, $c5a 2px, rgba(0, 0, 0, 0) 2px);
+
+			&:hover {
+				background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, $c5h 1px, $c5h 2px, rgba(0, 0, 0, 0) 2px);
+			}
+		}
+	}
+}
+
+
+.x0 {
+	background-color: $x0;
+	color: $x0p;
+
+	&.t {
+		background-color: transparent;
+	}
+
+	.border {
+		border-color: darken($x0, 4%);
+	}
+
+	.bg {
+		background-color: $x0;
+	}
+
+	.contrast {
+		background-color: $x0p;
+	}
+
+	a {
+		color: $x0a;
+		
+		&:hover {
+			color: $x0ah;
+		}
+
+		&:before {
+			background-color: $x0ah;
+		}
+	}
+
+	h1,h2,h3,h4,h5,h6,
+	.h1,.h2,.h3,.h4,.h5,.h6 {
+		color: $x0h;
+	}
+
+	.content-box {
+		a,
+		.underline {
+			text-shadow: .03em 0 $x0,-.03em 0 $x0,0 .03em $x0,0 -.03em $x0,.06em 0 $x0,-.06em 0 $x0,.09em 0 $x0,-.09em 0 $x0,.12em 0 $x0,-.12em 0 $x0,.15em 0 $x0,-.15em 0 $x0;
+			background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, $x0a 1px, $x0a 2px, rgba(0, 0, 0, 0) 2px);
+
+			&:hover {
+				background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, $x0h 1px, $x0h 2px, rgba(0, 0, 0, 0) 2px);
+			}
+		}
+	}
+
+	.splitting {
+		mark {
+			span {
+				background: $clead;
+				color: $c0;
+			}
+		}
+	}
+}
+
+.x1 {
+	background-color: $x1;
+	color: $x1p;
+
+	&.t {
+		background-color: transparent;
+	}
+
+	.border {
+		border-color: lighten($x1, 4%);
+	}
+
+	.bg {
+		background-color: $x1;
+	}
+
+	.contrast {
+		background-color: $x1p;
+	}
+
+	a {
+		color: $x1a;
+		
+		&:hover {
+			color: $x1ah;
+		}
+
+		&:before {
+			background-color: $x1ah;
+		}
+	}
+
+	h1,h2,h3,h4,h5,h6,
+	.h1,.h2,.h3,.h4,.h5,.h6 {
+		color: $x1h;
+	}
+
+	.content-box {
+		a,
+		.underline {
+			text-shadow: .03em 0 $x1,-.03em 0 $x1,0 .03em $x1,0 -.03em $x1,.06em 0 $x1,-.06em 0 $x1,.09em 0 $x1,-.09em 0 $x1,.12em 0 $x1,-.12em 0 $x1,.15em 0 $x1,-.15em 0 $x1;
+			background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, $x1a 1px, $x1a 2px, rgba(0, 0, 0, 0) 2px);
+
+			&:hover {
+				background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, $x1h 1px, $x1h 2px, rgba(0, 0, 0, 0) 2px);
+			}
+		}
+	}
+
+	.splitting {
+		mark {
+			span {
+				background: $clead;
+				color: $c0;
+			}
+		}
+	}
+}
+
+.clead.x0 {
+	background-color: $clead;
+	
+	a:hover {
+		color: $x0a;
+	}
+
+	.border {
+		border-color: lighten($clead, 4%);
+	}
+
+	.content-box {
+		a,
+		.underline {
+			text-shadow: .03em 0 $clead,-.03em 0 $clead,0 .03em $clead,0 -.03em $clead,.06em 0 $clead,-.06em 0 $clead,.09em 0 $clead,-.09em 0 $clead,.12em 0 $clead,-.12em 0 $clead,.15em 0 $clead,-.15em 0 $clead;
+			background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, $x0a 1px, $x0a 2px, rgba(0, 0, 0, 0) 2px);
+
+			&:hover {
+				background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, $x0h 1px, $x0h 2px, rgba(0, 0, 0, 0) 2px);
+			}
+		}
+	}
+}
+
+.clead.x1 {
+	background-color: $clead;
+
+	a:hover {
+		color: $x1a;
+	}
+
+	.border {
+		border-color: lighten($clead, 4%);
+	}
+
+	.content-box {
+		a,
+		.underline {
+			text-shadow: .03em 0 $clead,-.03em 0 $clead,0 .03em $clead,0 -.03em $clead,.06em 0 $clead,-.06em 0 $clead,.09em 0 $clead,-.09em 0 $clead,.12em 0 $clead,-.12em 0 $clead,.15em 0 $clead,-.15em 0 $clead;
+			background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, $x1a 1px, $x1a 2px, rgba(0, 0, 0, 0) 2px);
+
+			&:hover {
+				background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, $x1h 1px, $x1h 2px, rgba(0, 0, 0, 0) 2px);
+			}
+		}
+	}
+}
+
+.border-c0 {
+	.contrast {
+		background-color: $c0;
+	}
+}
+.bg-c0 {
+	.bg {
+		background-color: $c0;
+	}
+}
+
+.border-c1 {
+	.contrast {
+		background-color: $c1;
+	}
+}
+.bg-c1 {
+	.bg {
+		background-color: $c1;
+	}
+}
+
+.border-c2 {
+	.contrast {
+		background-color: $c2;
+	}
+}
+.bg-c2 {
+	.bg {
+		background-color: $c2;
+	}
+}
+
+.border-c3 {
+	.contrast {
+		background-color: $c3;
+	}
+}
+.bg-c3 {
+	.bg {
+		background-color: $c3;
+	}
+}
+
+.border-c4 {
+	.contrast {
+		background-color: $c4;
+	}
+}
+.bg-c4 {
+	.bg {
+		background-color: $c4;
+	}
+}
+
+.border-c5 {
+	.contrast {
+		background-color: $c5;
+	}
+}
+.bg-c5 {
+	.bg {
+		background-color: $c5;
+	}
+}

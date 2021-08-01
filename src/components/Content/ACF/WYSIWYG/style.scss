@@ -1,0 +1,43 @@
+// WYSIWYG Block
+.block-page_Pagebuilder_Sections_Content_Block_Wysiwyg {
+	position: relative;
+	z-index: 50;
+	display: block;
+	width: 100%;
+	height: auto;
+
+	padding: calc(3em + 3vw) calc(2em + 2vw) calc(3em + 3vw) calc(2em + 5vw);
+
+	@media screen and (max-width: 1024px) {
+		padding: calc(3em + 2vw) calc(1em + 1vw);
+	}
+}
+
+.attached-to-page_Pagebuilder_Sections_Content_Block_Slide {
+	position: relative;
+	z-index: 300;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+
+.attached-to-page_Pagebuilder_Sections_Content_Block_Image {
+	position: relative;
+	z-index: 300;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+
+	.wysiwyg-inject {
+		padding: calc(3em + 5vw) calc(2em + 5vw);
+		font-size: 1.125em;
+	}
+}

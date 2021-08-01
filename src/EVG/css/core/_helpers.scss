@@ -1,0 +1,344 @@
+/* ==========================================================================
+  Helpers
+========================================================================== */
+
+.hide, .hidden {
+	display: none !important;
+}
+  
+html {
+	overflow-x: hidden;
+}
+
+.layer {
+	will-change: transform;
+}
+
+::-webkit-scrollbar {
+	width: 7px;
+	background-color: $c5;
+}
+::-webkit-scrollbar-thumb {
+	background-color: $clead;
+}
+::-webkit-scrollbar-track {
+	background-color: $c5;
+}
+
+#header-fold-breakpoint {
+	position: absolute;
+	bottom: 1vw;
+	bottom: 1vh;
+	z-index: -1;
+	width: 0;
+	height: 0;
+	visibility: hidden;
+	// This 150vh means the target will come in view at 150 viewport height and start monitoring it from there, leaves some space before it starts spamming with direction output
+}
+
+img {
+	max-width: 100%;
+}
+
+.bg {
+	position: absolute !important;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+br {
+	margin: 0 !important;
+}
+
+.glare {
+	position: absolute;
+	z-index: 250;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(165deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.3) 45%, rgba(255,255,255,0) 70%, rgba(255,255,255,0) 100%); 
+	clip-path: polygon(69% 0, 100% 0%, 100% 100%, 87% 100%);
+	mix-blend-mode: lighten;
+}
+
+// .image-wrap {
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// 	width: 100%;
+// 	height: 100%;
+// }
+
+/* ==========================================================================
+  BG Overlay
+========================================================================== */
+
+.bg-overlay {
+	position: absolute;
+	z-index: 300;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	background-color: $c5;
+
+	.bg-overlay-x {
+		position: absolute;
+		z-index: 300;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(to bottom, rgba(32, 32, 32, 0.3) 0, rgba(32, 32, 32, 0.3) 1%, rgba(32, 32, 32, 0.36) 10%, rgba(32, 32, 32, 0.45) 60%, rgba(32, 32, 32, 0.7) 100%);
+		opacity: 0.05;
+		mix-blend-mode: multiply;
+	}
+
+	.fatbar {
+		position: absolute;
+		z-index: 300;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 40%;
+		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.8+0,0+81,0+100 */
+		background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.15) 60%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.15) 60%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0.15) 60%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+	}
+}
+
+/* ==========================================================================
+  Image Fade In
+========================================================================== */
+
+.gatsby-image-wrapper {
+
+	// Placeholder div
+	> div:nth-child(2) {
+		position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+		background-image: url(../../../src/images/loader-dark.svg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-color: rgba(0,0,0,0.03);
+		background-size: 3em;
+
+		.c3 &,
+		.c4 &,
+		.c5 &,
+		.x1 & {
+			background-image: url(../../../src/images/loader-light.svg);
+			background-color: rgba(255,255,255,0.03);
+		}
+
+		.png & {
+			background-color: transparent;
+		}
+	}
+
+	img {
+		&:first-of-type {
+			//filter: blur(2px);
+			transition: opacity 500ms ease-in-out 0s !important;
+			z-index: 100;
+		}
+		&:last-child {
+			z-index: 50;
+		}
+	}
+}
+
+/* ==========================================================================
+  Anchor Points
+========================================================================== */
+
+#anchor-level {
+	position: absolute;
+	display: block;
+	height: 50vh;
+}
+
+.anchor {
+	position: absolute;
+	top: calc(50% - 50vh);
+	left: 0;
+	visibility: hidden;
+
+	&.topper {
+		top: calc(50vh - 3em);
+	}
+}
+
+/* ==========================================================================
+	Loaders
+========================================================================== */
+
+.loader-spinner {
+	display: inline-block;
+	margin: 0 .25em;
+	font-size: .8em;
+	animation-name: spinner;
+  animation-duration: .35s;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-timing-function: linear;
+	transform-origin: 50% 49%;
+}
+
+/* ==========================================================================
+  Map
+  ========================================================================== */
+	
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+	display:none;
+}
+.gmnoprint div {
+	background:none !important;
+}
+#GMapsID div div a div img{
+	display:none;
+}
+
+#map {
+	min-height: 42vw;
+
+	button, .gm-svpc {
+		background: #fff !important;
+	}
+	.gm-style-mtc {
+		display: none;
+	}
+
+	img {
+			max-width: none;
+			width: auto;
+	}
+}
+
+/* ==========================================================================
+	Aspect Ratios
+========================================================================== */
+
+.aspect-ratio {
+	position: relative;
+	top: 0;
+	display: block;
+	width: 100%;
+	height: 0;
+
+	.gatsby-image-wrapper {
+		position: absolute !important;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+/* ==========================================================================
+	BGS
+========================================================================== */
+
+.bg-cover {
+	background-size: cover;
+	background-position: center;
+}
+
+.bg-contain {
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.bg-fixed {
+	background-attachment: fixed;
+}
+
+/* ==========================================================================
+	Image Container Object Fit Cover
+========================================================================== */
+
+.img-cover {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  
+	object-fit: cover;
+	font-family: 'object-fit: cover;';
+}
+  
+.img-contain {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: translate3d(0,0,0);
+  
+	object-fit: contain;
+	font-family: 'object-fit: contain;';
+}
+
+.skip-link {
+	display: none;
+}
+  
+.bg-video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 0;
+  
+	video {
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  -webkit-transform: translateX(-50%) translateY(-50%);
+	  transform: translateX(-50%) translateY(-50%);
+	  min-width: 100%;
+	  min-height: 100%;
+	  width: auto;
+	  height: auto;
+	  z-index: 0;
+	  overflow: hidden;
+	}
+}
+
+/* ==========================================================================
+	Parallax
+========================================================================== */
+
+.parallax-outer {
+  position: absolute;
+  z-index: 300;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.parallax-inner {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

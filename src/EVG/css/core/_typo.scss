@@ -1,0 +1,430 @@
+/* ==========================================================================
+  Typo
+========================================================================== */
+
+html {
+	font-family: $font3;
+	font-size: ($fs * 1px);
+	font-weight: $fwb;
+	line-height: $flh;
+	font-style: normal;
+	color: $c0p;
+	//word-wrap: break-word;
+  
+	@media screen and (min-width: 1024px) {
+	  font-size: ($fs * 1.125px)
+	}
+  
+	@media screen and (min-width: 1280px) {
+	  font-size: ($fs * 1.125px);
+	}
+  
+	@media screen and (min-width: 2000px) {
+	  font-size: 1vw;
+	}
+}
+
+strong, b {
+	font-weight: $fwbs;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6  {
+	text-overflow: ellipsis;
+	strong {
+		font-weight: $fwhs;
+	}
+}
+
+.lowercase {
+	text-transform: lowercase;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+
+
+/* ==========================================================================
+	PRE
+========================================================================== */
+
+pre {
+	font-family: Consolas,"Roboto Mono","Liberation Mono",Menlo,Courier,monospace;
+	font-size: .85rem;
+	padding: 1.5rem;
+	line-height: 1.42;
+	margin: 0 0 1.5rem;
+	background: hsla(0,0%,0%,0.04);
+	border-radius: 3px;
+	overflow: auto;
+	white-space: pre;
+}
+
+code {
+	font-family: Consolas,"Roboto Mono","Liberation Mono",Menlo,Courier,monospace;
+	font-size: .85rem;
+	line-height: 1.5rem;
+	padding: .2em 0;
+	background-color: hsla(0,0%,0%,0.04);
+	border-radius: 3px;
+	white-space: pre;
+
+	&::before {
+		content: " ";
+		letter-spacing: -0.2em;
+	}
+	&:after {
+		content: " ";
+		letter-spacing: -0.2em;
+	}
+}
+
+/* ==========================================================================
+	Font Sizes
+========================================================================== */
+
+h1, .h1,
+h2, .h2 {
+	font-family: $font1;
+	font-weight: $fwh;
+	letter-spacing: -0.01em;
+	margin: 3rem 0 1.5rem;
+}
+
+h3, .h3,
+h4, .h4 {
+	font-family: $font1;
+	font-weight: $fwh;
+	letter-spacing: -0.01em;
+	margin: 3rem 0 1.5rem;
+}
+
+h5, .h5,
+h6, .h6 {
+	font-family: $font1;
+	font-weight: $fwh;
+	letter-spacing: -0.01em;
+	margin: 3rem 0 1.5rem;
+}
+
+h1, .h1 {
+	font-size: 3em;
+	line-height: 1.2;
+
+	@media screen and (max-width: 767px) {
+		font-size: 2.5em;
+	}
+}
+
+h2, .h2 {
+	font-size: 2.25em;
+	line-height: 1.3;
+}
+
+h3, .h3 {
+	font-size: 1.85em;
+	line-height: 1.4;
+}
+
+h4, .h4 {
+	font-size: 1.4em;
+	line-height: 1.5;
+}
+
+h5, .h5 {
+	font-size: 1.25em;
+	line-height: 1.62;
+}
+
+h6, .h6 {
+	font-size: 1.1em;
+	line-height: 1.62;
+}
+
+hr {
+	margin: 2rem 0 2rem;
+}
+
+p {
+	margin: 1.5rem 0;
+}
+
+
+h1,h2,h3,h4,h5,h6,p,address, hr, br {
+	text-rendering: optimizeLegibility;
+  
+	span, br {
+	  line-height: inherit;
+	}
+  
+	&:first-child {
+	  margin-top: 0;
+	}
+  
+	&:last-child {
+	  margin-bottom: 0;
+	}
+}
+
+/* ==========================================================================
+	Mark
+========================================================================== */
+
+mark {
+	display: inline-block;
+	background: $clead;
+	padding: 0 .15em;
+}
+
+.splitting {
+	mark {
+		background: none;
+		padding: 0;
+
+		span {
+			background: $clead;
+			padding: 0 .15em;
+		}
+	}
+}
+
+/* ==========================================================================
+	Tables
+========================================================================== */
+
+table {
+	width: 100%;
+	margin: 2em 0;
+	text-align: left;
+	text-transform: uppercase;
+	font-size: 0.85em;
+	border-spacing: 0px;
+	border-collapse: separate;
+	background: darken($c0,7%);
+  
+	thead {
+	  font-weight: 800;
+	}
+  
+	th, thead, thead td {
+	  background: $clead;
+	  color: $c0;
+	}
+  
+	th, td, thead td {
+	  padding: 1em;
+	}
+  
+	td {
+	  background: darken($c0,7%);
+	  border-left: 1px solid $c0;
+	  border-right: 1px solid $c0;
+	  border-bottom: 2px solid $c0;
+	}
+  
+	tr:first-child td {
+	  padding-top: 2rem;
+	}
+  
+	tr:last-child td {
+	  padding-bottom: 2rem;
+	  border-bottom: none;
+	}
+  
+	thead td {
+	  padding: 1rem !important;
+	}
+	tfoot td {
+	  background: $c2;
+	  color: $c0;
+	}
+}
+
+/* ==========================================================================
+	Lists
+========================================================================== */
+
+ul {
+	margin: 0 0 1.5rem 1.5rem;
+	padding: 0;
+	list-style-position: outside;
+	list-style-image: none;
+
+	li {
+		padding-left: 0;
+		margin-bottom: calc(1.5rem / 2);
+	}
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+/* ==========================================================================
+	Helpers
+========================================================================== */
+
+::selection {
+	background: $clead; /* WebKit/Blink Browsers */
+	color: $c0;
+}
+
+::-moz-selection {
+	background: $clead; /* Gecko Browsers */
+	color: $c0;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.justified {
+	text-align: justify;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+.colored {
+	color: $clead;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+hr {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 1px;
+	border: none;
+	overflow: visible;
+
+	&:after {
+	  content: '';
+	  position: absolute;
+	  border: 0;
+	  border-top: 3px solid $c1;
+	  width: 8em;
+	  left: 50%;
+	  transform: translate3d(-50%,0,0);
+	}
+}
+
+br {
+	line-height: 100%;
+}
+
+a {
+	text-decoration: none;
+  color: $clead;
+  
+  &:hover {
+    color: $clead2;
+  }
+}
+
+.fs-1125 {
+	font-size: 1.125em;
+}
+.fs-125, .big {
+	font-size: 1.25em;
+}
+
+.fs-100, .normal {
+	font-size: 1em;
+}
+
+.fs-85, .small {
+	font-size: .85em;
+
+	h1, .h1,
+	h2, .h2,
+	h3, .h3,
+	h4, .h4,
+	h5, .h5,
+	h6, .h6  {
+		margin: 2.55rem 0 1.275rem;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	p {
+		margin: 1.275rem 0;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.fw-100, .thin {
+	font-weight: 100;
+}
+
+.fw-200 {
+	font-weight: 200;
+}
+
+.fw-300, .slim, .light {
+	font-weight: 300;
+}
+
+.fw-400 {
+	font-weight: 400;
+}
+
+.fw-500 {
+	font-weight: 500;
+}
+
+.fw-600 {
+	font-weight: 600;
+}
+
+.fw-700, .fat {
+	font-weight: 700;
+}
+
+.fw-800 {
+	font-weight: 800;
+}
+
+.fw-900, .bold {
+	font-weight: 900;
+}
+
+/* ==========================================================================
+	SubHeadings
+========================================================================== */
+
+h1 + h6 {
+	margin-top: -1rem;
+}
