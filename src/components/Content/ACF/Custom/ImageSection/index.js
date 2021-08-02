@@ -7,7 +7,7 @@ import { Parallax } from 'react-scroll-parallax';
 import ReactCursorPosition from 'react-cursor-position';
 
 function CustomBlock(props) {
-  console.log(props.position)
+
 	const [io, ioInView] = useInView({ triggerOnce: true })
  
   const Wysiwyg = (props) => {
@@ -17,11 +17,7 @@ function CustomBlock(props) {
    
     useEffect(()=> {
       let color = document.querySelector('.color')
-      
-      if(!isPositionOutside) 
-        color.classList.add('active')
-      else 
-        color.classList.remove('active')
+  
       
       if(position.x > 0 && position.y > 1) {
         color.style.left = position.x + 'px'
@@ -31,7 +27,7 @@ function CustomBlock(props) {
     }, [position, isPositionOutside]) 
 
     return(
-      <div className=" content">
+      <div  onMouseOver={(e) => document.querySelector('.color').classList.add('active')}  onMouseLeave={(e) => document.querySelector('.color').classList.remove('active')}  className=" content">
         <h1 className={`font1 wysiwyg-inject`} dangerouslySetInnerHTML={{__html: props.wysiwyg}} />
       </div>
     ) 
@@ -43,6 +39,7 @@ function CustomBlock(props) {
 	    <div ref={io} className="flex-12">
 
           <ReactCursorPosition className="span-7 content-container">
+            <div className="color"></div>
             <Wysiwyg wysiwyg={props.wysiwygs[0]} />
           </ReactCursorPosition>
          
